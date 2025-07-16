@@ -1,0 +1,122 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* Evita el scroll */
+}
+
+/* Contenedor principal que ocupa toda la pantalla */
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* Imagen de fondo */
+    background-image: url('/images/fondoindice.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Contenedor de los botones del menú */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Espacio entre botones */
+    margin-left: 50px;
+    /* Margen desde el borde izquierdo */
+    /* Posicionamiento de los botones en el lado izquierdo */
+}
+
+/* Estilos para cada botón del menú */
+.menu-button {
+    /* Fondo semi-transparente con degradado */
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(173, 255, 47, 0.8));
+    border: none;
+    border-radius: 25px;
+    /* Bordes redondeados */
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre ícono y texto */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: #2d4a2b;
+    /* Color del texto */
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    /* Animación suave para hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    min-width: 180px;
+    /* Ancho mínimo para los botones */
+}
+
+/* Efectos hover para los botones */
+.menu-button:hover {
+    transform: translateX(10px);
+    /* Desplazamiento hacia la derecha */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada */
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.9), rgba(173, 255, 47, 0.9));
+}
+
+/* Estilos para los íconos */
+.icon {
+    font-size: 20px;
+    display: inline-block;
+}
+
+/* Estilos para el texto de los botones */
+.button-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .menu-buttons {
+        margin-left: 30px;
+        /* Menor margen en pantallas pequeñas */
+    }
+
+    .menu-button {
+        padding: 12px 30px;
+        min-width: 150px;
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+
+    .button-text {
+        font-size: 14px;
+    }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .menu-buttons {
+        margin-left: 20px;
+        gap: 15px;
+    }
+
+    .menu-button {
+        padding: 10px 25px;
+        min-width: 130px;
+    }
+}

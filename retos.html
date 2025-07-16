@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retos</title>
+
+    <!-- Estilos base del menú y fondo -->
+    <link rel="stylesheet" href="styleIndice.css" />
+
+    <!-- Estilos exclusivos para Retos -->
+    <link rel="stylesheet" href="styleRetos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- ——— Menú lateral ——— -->
+        <div class="menu-buttons">
+            <a href="perfil.html" class="menu-button"><span class="icon">👤</span><span
+                    class="button-text">PERFIL</span></a>
+            <a href="retos.html" class="menu-button active"><span class="icon">✓</span><span
+                    class="button-text">RETOS</span></a>
+            <a href="redes.html" class="menu-button"><span class="icon">🌐</span><span
+                    class="button-text">REDES</span></a>
+            <a href="eventos.html" class="menu-button"><span class="icon">🎉</span><span
+                    class="button-text">EVENTOS</span></a>
+        </div>
+
+        <!-- ——— Lista de retos ——— -->
+        <section class="challenge-list">
+            <!-- NIVEL 01 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 01:</h3>
+                    <p class="level-desc">
+                        Planta una semilla o un árbol en tu casa, jardín o espacio comunitario.
+                        Sube una foto del proceso y comparte cómo lo cuidas.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 02 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 02:</h3>
+                    <p class="level-desc">
+                        Pasa un día entero sin usar plásticos de un solo uso (bolsas, botellas, envases).
+                        Muestra en un video cómo lo lograste.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 03 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 03:</h3>
+                    <p class="level-desc">
+                        Usa bicicleta, camina o transporte público por un día.
+                        Publica tu recorrido y cuenta tu experiencia sin contaminar.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 04 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 04:</h3>
+                    <p class="level-desc">
+                        Organiza o participa en una limpieza de un espacio natural cercano
+                        (parque, río, playa). Comparte fotos del antes y después.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 05 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 05:</h3>
+                    <p class="level-desc">
+                        Reduce tu consumo energético apagando luces y aparatos que no uses por un día.
+                        Sube evidencia de tus acciones y tu consumo diario si puedes medirlo.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 06 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 06:</h3>
+                    <p class="level-desc">
+                        Cambia 3 hábitos diarios para cuidar el ambiente (ej. cerrar el caño al lavarte
+                        los dientes, duchas cortas, usar bolsas reutilizables) y explica cuáles adoptaste.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 07 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 07:</h3>
+                    <p class="level-desc">
+                        Transforma botellas, cartones o frascos en algo útil (macetas, organizadores, juguetes).
+                        Muestra el "antes" del residuo y el "después" del objeto creado.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 08 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 08:</h3>
+                    <p class="level-desc">
+                        Prepara un almuerzo o cena 100 % vegetariano o vegano por un día.
+                        Explica el impacto ambiental positivo de reducir el consumo de carne.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 09 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 09:</h3>
+                    <p class="level-desc">
+                        Investiga un dato importante sobre el cambio climático, deforestación, contaminación
+                        o reciclaje, y compártelo en tus redes con una reflexión personal.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+
+            <!-- NIVEL 10 -->
+            <div class="challenge-item">
+                <div class="challenge-card">
+                    <h3 class="level-title">NIVEL 10:</h3>
+                    <p class="level-desc">
+                        Separa correctamente tus residuos por un día o una semana y documenta cómo lo haces
+                        en casa. Puedes enseñar a otros cómo organizar sus residuos también.
+                    </p>
+                </div>
+                <div class="challenge-check">✓</div>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Selecciona todos los cuadrados de verificación
+        document.querySelectorAll('.challenge-check').forEach(box => {
+            // Cada clic alterna la marca
+            box.addEventListener('click', () => {
+                box.classList.toggle('checked');
+                box.textContent = box.classList.contains('checked') ? '✓' : '';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

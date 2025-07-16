@@ -1,0 +1,105 @@
+/* ——— Complemento de styleIndice.css ——— */
+
+/* Botón activo */
+.menu-button.active {
+    filter: brightness(.75);
+}
+
+/* Lista de retos */
+.challenge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-left: 140px;
+    /* separa la lista del menú */
+    max-height: 90vh;
+    overflow-y: auto;
+    /* permite scroll interno si hiciera falta */
+    padding-right: 20px;
+}
+
+/* Cada fila: tarjeta + check */
+.challenge-item {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+/* Tarjeta verde claro */
+.challenge-card {
+    width: 480px;
+    background: rgba(240, 255, 240, .95);
+    border-radius: 4px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+    padding: 22px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.level-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.level-desc {
+    background: #dff3d9;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: .95rem;
+    line-height: 1.35rem;
+}
+
+/* Casilla de verificación estilo “tick” */
+.challenge-check {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s;
+    background: #dff3d9;
+    /* desmarcado */
+    color: transparent;
+    /* sin tick visible */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+}
+
+.challenge-check.checked {
+    background: #90e478;
+    /* marcado */
+    color: #000;
+    /* muestra el tick */
+}
+
+/* Responsive (igual que antes) */
+@media(max-width:768px) {
+    .challenge-check {
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .challenge-card {
+        width: 100%
+    }
+
+    .challenge-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .challenge-check {
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,106 @@
+/* ───── Complemento de styleIndice.css ───── */
+
+/* Botón activo */
+.menu-button.active {
+    filter: brightness(.75);
+}
+
+/* Tarjeta de publicación */
+.post-card {
+    width: 460px;
+    padding: 34px 32px;
+    background: rgba(240, 255, 240, .95);
+    border-radius: 6px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-left: 140px;
+    /* separa la tarjeta del menú */
+}
+
+/* Encabezado */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.avatar-sm {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 700
+}
+
+.fav-star {
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    color: #f2d13d;
+}
+
+/* Foto principal */
+.post-photo img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border: 6px solid #fff;
+    border-radius: 2px;
+}
+
+/* Descripción */
+.caption {
+    font-size: .95rem;
+    line-height: 1.4;
+}
+
+/* Comentarios */
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #dff3d9;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.comment-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.comment-body {
+    display: flex;
+    flex-direction: column
+}
+
+.comment-user {
+    font-weight: 700;
+    font-size: .9rem
+}
+
+.comment-text {
+    font-size: .9rem
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .post-card {
+        margin: 40px auto 0;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+
+    <!-- 1)  Estilos base que ya usas en el índice -->
+    <link rel="stylesheet" href="styleIndice.css" />
+
+    <!-- 2)  Estilos exclusivos de esta vista -->
+    <link rel="stylesheet" href="stylePerfil.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- ===== Menú lateral ===== -->
+        <div class="menu-buttons">
+            <a href="perfil.html" class="menu-button active">
+                <span class="icon">👤</span><span class="button-text">PERFIL</span>
+            </a>
+            <a href="retos.html" class="menu-button"><span class="icon">✓</span><span
+                    class="button-text">RETOS</span></a>
+            <a href="redes.html" class="menu-button"><span class="icon">🌐</span><span
+                    class="button-text">REDES</span></a>
+            <a href="eventos.html" class="menu-button"><span class="icon">🎉</span><span
+                    class="button-text">EVENTOS</span></a>
+        </div>
+
+        <!-- ===== Tarjeta de perfil ===== -->
+        <section class="profile-card">
+            <img src="/images/fondoperfil.png" alt="Foto de perfil" class="avatar" />
+
+            <div class="field">
+                <label for="username">Usuario:</label>
+                <input id="username" type="text" value="Generico" readonly />
+            </div>
+
+            <div class="field">
+                <label for="description">Descripción:</label>
+                <textarea id="description" rows="3" readonly>Generico</textarea>
+            </div>
+
+            <div class="actions">
+                <button id="editBtn" class="btn">Editar</button>
+                <button id="saveBtn" class="btn" disabled>Guardar</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== Lógica de edición / guardado ===== -->
+    <script>
+        const editBtn = document.getElementById('editBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const fields = [
+            document.getElementById('username'),
+            document.getElementById('description')
+        ];
+
+        editBtn.addEventListener('click', () => {
+            fields.forEach(f => { f.readOnly = false; f.classList.add('editable'); });
+            saveBtn.disabled = false;
+            editBtn.disabled = true;
+            fields[0].focus();
+        });
+
+        saveBtn.addEventListener('click', () => {
+            fields.forEach(f => { f.readOnly = true; f.classList.remove('editable'); });
+            saveBtn.disabled = true;
+            editBtn.disabled = false;
+            /* ⇣ aquí podrías enviar datos al servidor con fetch() */
+        });
+    </script>
+</body>
+
+</html>

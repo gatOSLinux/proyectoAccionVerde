@@ -1,0 +1,103 @@
+/* ───── coloca estos estilos junto a styleIndice.css ───── */
+
+/* === Botón activo (lo oscurece un poco) === */
+.menu-button.active {
+    filter: brightness(.75);
+}
+
+/* === Tarjeta de perfil === */
+.profile-card {
+    width: 420px;
+    padding: 35px;
+    background: rgba(255, 255, 255, .9);
+    border-radius: 6px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    /*  Se coloca a la derecha del menú  */
+    margin-left: 140px;
+    /* ajusta si la quieres más separada */
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+    box-shadow: 0 0 0 4px #18d47b;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.field label {
+    font-weight: 700
+}
+
+.field input,
+.field textarea {
+    padding: 10px 14px;
+    border: 2px solid #cfe6d0;
+    border-radius: 6px;
+    background: #e2f3e3;
+    resize: none;
+    font-size: 1rem;
+    transition: border-color .2s;
+}
+
+.editable {
+    border-color: #18d47b;
+    background: #fff;
+}
+
+/* === Botones “Editar / Guardar” === */
+.actions {
+    display: flex;
+    gap: 22px;
+    justify-content: center
+}
+
+.btn {
+    min-width: 120px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#editBtn {
+    background: #90e478;
+    color: #000
+}
+
+#saveBtn {
+    background: #c6e7b5;
+    color: #000
+}
+
+.btn:disabled {
+    filter: grayscale(.85) opacity(.45);
+    cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+    filter: brightness(.9)
+}
+
+/*  ===== Responsive (opcional) ===== */
+@media (max-width:768px) {
+    .profile-card {
+        margin: 40px auto 0;
+        /* la centramos debajo del menú */
+    }
+}
